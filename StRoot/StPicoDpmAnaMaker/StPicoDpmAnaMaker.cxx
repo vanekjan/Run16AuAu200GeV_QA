@@ -35,7 +35,7 @@ int StPicoDpmAnaMaker::InitHF() {
 
  mOutFileBaseName = mOutFileBaseName.ReplaceAll(".root", "");
 
-//------------------GET AND SAVE LIST OF RUNS------------------------------------------------------------
+//------------------GET AND SAVE LIST OF RUNS-----------------------------------------------------------
 
   ifstream RunList("./ListOfRuns/Runnumber.list");
   

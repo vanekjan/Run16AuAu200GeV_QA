@@ -4,7 +4,7 @@
 #include "StPicoHFMaker/StPicoHFMaker.h"
 #include "TNtuple.h"
 #include "StRefMultCorr/StRefMultCorr.h"
-#include "TH2F.h"
+#include "TH2D.h"
 //#include "StPicoDpmAnaHists.h"
 #include <vector>
 
@@ -28,8 +28,8 @@
 
 #include "phys_constants.h"
 
-#include "TH1F.h"
-#include "TH3F.h"
+#include "TH1D.h"
+#include "TH3D.h"
 
 
 #include <ctime>
@@ -208,28 +208,28 @@ TString mOutFileBaseName;
  // static float m_DcaEdgeDca[m_nDcasDca + 1];
    //-----------------------------------
 
-   TH1F* mh1Cent;
-   TH1F* mh1CentWg;
-   TH1F* mh1gRefmultCor;
-   TH1F* mh1gRefmultCorWg;
-   TH2F* mh2CentVz;
-   TH2F* mh2CentVzWg;
+   TH1D* mh1Cent;
+   TH1D* mh1CentWg;
+   TH1D* mh1gRefmultCor;
+   TH1D* mh1gRefmultCorWg;
+   TH2D* mh2CentVz;
+   TH2D* mh2CentVzWg;
 
 
    //HFT ratio QA
-   TH2F* mh2Tpc1PtCent;
-   TH2F* mh2Tpc1PhiVz;
-   TH2F* mh2HFT1PtCent;
-   TH2F* mh2HFT1PhiVz;
-   TH2F* mh2Tpc1PtCentPartEtaVzPhi[m_nParticles][m_nEtasRatio][m_nVzsRatio][m_nPhisRatio];
-   TH2F* mh2HFT1PtCentPartEtaVzPhi[m_nParticles][m_nEtasRatio][m_nVzsRatio][m_nPhisRatio];
+   TH2D* mh2Tpc1PtCent;
+   TH2D* mh2Tpc1PhiVz;
+   TH2D* mh2HFT1PtCent;
+   TH2D* mh2HFT1PhiVz;
+   TH2D* mh2Tpc1PtCentPartEtaVzPhi[m_nParticles][m_nEtasRatio][m_nVzsRatio][m_nPhisRatio];
+   TH2D* mh2HFT1PtCentPartEtaVzPhi[m_nParticles][m_nEtasRatio][m_nVzsRatio][m_nPhisRatio];
 
    //HFT Dca
-   TH3F* mh3DcaXyZPtCentPartEtaVzPhi[m_nParticles][m_nEtasDca][m_nVzsDca][m_nCentsDca];
+   TH3D* mh3DcaXyZPtCentPartEtaVzPhi[m_nParticles][m_nEtasDca][m_nVzsDca][m_nCentsDca];
 
-   TH3F* mh3DcaPtCent;
-   TH3F* mh3DcaXyPtCent;
-   TH3F* mh3DcaZPtCent;
+   TH3D* mh3DcaPtCent;
+   TH3D* mh3DcaXyPtCent;
+   TH3D* mh3DcaZPtCent;
 
 
 	int RunId;

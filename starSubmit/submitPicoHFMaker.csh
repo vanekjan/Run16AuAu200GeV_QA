@@ -7,7 +7,7 @@
 #    all submission related files will end up there
 #
 #  - in ${baseFolder} the script expects (links or the actual folders)
-#      .sl64_gcc482
+#      .sl73_gcc485
 #      StRoot                     ( from the git repo )
 #      run14AuAu200GeVPrescales   ( from the git repo )
 #      starSubmit                 ( from the git repo )
@@ -70,8 +70,8 @@ set productionbasePath=root://xrdstar.rcf.bnl.gov:1095//home/starlib/home/starre
 set xmlFile=submitPicoHFMaker.xml
 
 # -- set min and mx number of files, orig 80 to 90
-set minNFiles=150
-set maxNFiles=160
+set minNFiles=20
+set maxNFiles=30
 
 # ###############################################
 # -- DON'T CHANGE BELOW THAT LINE
@@ -91,7 +91,7 @@ mkdir -p report err log list csh
 # -----------------------------------------------
 
 # -- check for prerequisits and create links
-set folders=".sl64_gcc482 run14AuAu200GeVPrescales"
+set folders=".sl73_gcc485 run14AuAu200GeVPrescales"
 
 echo -n "Checking prerequisits folders ...  "
 foreach folder ( $folders ) 

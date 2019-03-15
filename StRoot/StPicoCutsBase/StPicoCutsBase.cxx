@@ -317,9 +317,9 @@ bool StPicoCutsBase::hasGoodNHitsFitnHitsMax(StPicoTrack const *trk) const {
 //________________________________________________________________
 bool StPicoCutsBase::hasGoodDCAMaxGlob(StPhysicalHelixD helix, StThreeVectorF pVtx) const { 
 
-	float dca_xy_QA = float(helix.geometricSignedDistance(pVtx.x(), pVtx.y()));
+	float dca_QA = float(helix.geometricSignedDistance(pVtx));
 
-	return (dca_xy_QA < mDCAMaxGlob); 
+	return (fabs(dca_QA) < mDCAMaxGlob); 
 }
 
 // _________________________________________________________

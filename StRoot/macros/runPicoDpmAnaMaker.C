@@ -40,7 +40,7 @@
 #include "StPicoHFMaker/StPicoHFEvent.h"
 #include "StPicoHFMaker/StHFCuts.h"
 
-#include "StPicoHFMyAnaMaker/StPicoHFMyAnaMaker.h"
+//#include "StPicoHFMyAnaMaker/StPicoHFMyAnaMaker.h"
 
 #include "macros/loadSharedHFLibraries.C"
 
@@ -133,8 +133,8 @@ void runPicoDpmAnaMaker(const Char_t *inputFile="test.list", const Char_t *outpu
     cout << "Unknown makerMode! Exiting..." << endl;
     exit(1);
   }
-  StPicoDstMaker::PicoIoMode myMode = StPicoDstMaker::PicoIoMode::IoRead; //SL16j: See StRoot/StPicoDstMaker/StpicodstMaker.h: 28: enum PicoIoMode {IoWrite=1, IoRead=2};
-  StPicoDstMaker* picoDstMaker = new StPicoDstMaker(myMode, sInputFile, "picoDstMaker");
+//  StPicoDstMaker::PicoIoMode myMode = StPicoDstMaker::PicoIoMode::IoRead; //SL16j: See StRoot/StPicoDstMaker/StpicodstMaker.h: 28: enum PicoIoMode {IoWrite=1, IoRead=2};
+  StPicoDstMaker* picoDstMaker = new StPicoDstMaker(StPicoDstMaker::IoRead, sInputFile, "picoDstMaker");
 //  StPicoDstMaker* picoDstMaker = new StPicoDstMaker(2, sInputFile, "picoDstMaker"); //for local testing only
   StPicoDpmAnaMaker* picoDpmAnaMaker = new StPicoDpmAnaMaker("picoDpmAnaMaker", picoDstMaker, outputFile, sInputListHF);
   picoDpmAnaMaker->setMakerMode(makerMode);
@@ -165,13 +165,13 @@ void runPicoDpmAnaMaker(const Char_t *inputFile="test.list", const Char_t *outpu
   hfCuts->addTriggerId(520031);    // VPDMB-5-p-sst
   hfCuts->addTriggerId(520041);    // VPDMB-5-p-sst
   hfCuts->addTriggerId(520051);    // VPDMB-5-p-sst
-    
+/*  
   hfCuts->addTriggerId(520802);    // VPDMB-5-p-hlt
   hfCuts->addTriggerId(520812);    // VPDMB-5-p-hlt 
   hfCuts->addTriggerId(520822);    // VPDMB-5-p-hlt
   hfCuts->addTriggerId(520832);    // VPDMB-5-p-hlt
   hfCuts->addTriggerId(520842);    // VPDMB-5-p-hlt
-	
+*/
   hfCuts->setCutNHitsFitMin(15); //kvapil 20 to 15
 	hfCuts->setCutNHitsFitMinHist(20); //for QA  histograms and general QA, Vanek
   hfCuts->setCutRequireHFT(true);

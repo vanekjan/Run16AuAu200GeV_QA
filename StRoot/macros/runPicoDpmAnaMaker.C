@@ -159,12 +159,15 @@ void runPicoDpmAnaMaker(const Char_t *inputFile="test.list", const Char_t *outpu
 	hfCuts->setCutDCAMaxGlob(1.5); //For general QA, Vanek
 
 	//SL16j triggers
-  hfCuts->addTriggerId(520001);    // VPDMB-5-p-sst
+  hfCuts->addTriggerId(520001);    // VPDMB-5-p-sst (physics stream)
   hfCuts->addTriggerId(520011);    // VPDMB-5-p-sst 
   hfCuts->addTriggerId(520021);    // VPDMB-5-p-sst
   hfCuts->addTriggerId(520031);    // VPDMB-5-p-sst
   hfCuts->addTriggerId(520041);    // VPDMB-5-p-sst
   hfCuts->addTriggerId(520051);    // VPDMB-5-p-sst
+
+  hfCuts->addTriggerId(570002);    // VPDMB-5-nosst (production 2, nosst stream)
+  hfCuts->addTriggerId(570001);    // VPDMB-5-sst (production 2, sst stream )
 /*  
   hfCuts->addTriggerId(520802);    // VPDMB-5-p-hlt
   hfCuts->addTriggerId(520812);    // VPDMB-5-p-hlt 
